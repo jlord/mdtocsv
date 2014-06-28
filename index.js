@@ -1,7 +1,8 @@
 var fs = require('fs')
 
-var markdown = fs.readFileSync('talks.md')
+var markdown = fs.readFileSync('talks2013.md')
 var array = markdown.toString().split('\n')
+
 commafyRows(array)
 
 function commafyRows(data) {
@@ -26,5 +27,5 @@ function cleanupRows(data) {
   })
 
 var superclean = cleanData.join('\n')
-fs.writeFileSync('test.csv', superclean)
+fs.writeFileSync('test2013.csv', superclean)
 }
